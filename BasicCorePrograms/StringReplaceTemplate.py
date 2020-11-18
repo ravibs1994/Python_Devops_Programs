@@ -1,9 +1,9 @@
 """
-   * author - Ravindra Suryawanshi
-   * date - 11/11/2020
-   * time - 15.30
-   * package - Basic core programs
-   * Title -User Input and Replace String Template “Hello <<UserName>>, How are you?
+  * Author :Ravindra
+  * Date   :11-11-2020
+  * Time   :12:49
+  * Package:BasicCorePrograms
+  * Statement:User Input and Replace String Template “Hello <<UserName>>, How are you?
 """
 # import regular Expression
 import re
@@ -12,23 +12,35 @@ class StringReplace:
   # Global Variable Declaration
   userName = ""
   name = ""
-  # constructor
+
   def __init__(self, uname, n):
+   """define Constructor
+    Operation:To initialize Data Members And Instantiate Object
+   """
    self.userName = uname
    self.name = n
-# method definition
+
   def replacestring(self):
-   print(" Hello " + self.userName + " How are you?")
-   replace = self.userName.replace(self.userName, self.name)
-   print(" Hello " + replace + " How are you?")
+    """Method Definition
+       Operation:Replace String one to another
+    :return: Does not Retun any Value
+    """
+    print(" Hello " + self.userName + " How are you?")
+    replace = self.userName.replace(self.userName, self.name)
+    print(" Hello " + replace + " How are you?")
+
 # Taking inputs from user
-userName = input("Enter your userName: ")
-name = input(" Enter Name :")
+while True:
+  userName = input("Enter your userName: ")
+  name = input(" Enter Name :")
+
 # Validate using regular Expression
-if re.match("^[A-Z]{1}[a-z]{2,}$", userName):
-  # object Creation
-  str1 = StringReplace(userName, name)
-  # method call
-  str1.replacestring()
-else:
-  print("Enter Valid UserName ")
+  if re.match("^[A-Z]{1}[a-z]{2,}$", userName):
+    # object Creation
+    str1 = StringReplace(userName, name)
+    # method call
+    str1.replacestring()
+    break
+  else:
+    print("Enter Valid UserName ")
+    continue
