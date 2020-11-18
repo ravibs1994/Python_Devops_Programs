@@ -38,12 +38,14 @@ class Gambler:
          Operation:Taking inputs from user
          :return:does not return any value
       """
-      try:
-        self.stake = int(input("Enter amount to start gambling: "))
-        self.goal = int(input("Enter amount for win: "))
-        self.numberOfTimes = int(input("How many times you want to play: "))
-      except ValueError:
-        print("Opps you Enter Wrong Value  ")
+      while True:
+        try:
+          self.stake = int(input("Enter amount to start gambling: "))
+          self.goal = int(input("Enter amount for win: "))
+          self.numberOfTimes = int(input("How many times you want to play: "))
+          break
+        except ValueError:
+          print("Opps you Enter Wrong Value  ")
 
 if __name__ == "__main__":
   """Main method """
