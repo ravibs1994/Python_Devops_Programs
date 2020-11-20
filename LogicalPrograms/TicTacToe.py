@@ -46,7 +46,7 @@ class TicTacToe:
             print("plz enter position should be between 1-9 ")
             return self.userTurn()
         return userPosition
-
+    
     def computerTurn(self):
         """ Method Definition
         Operation: search for new emty position
