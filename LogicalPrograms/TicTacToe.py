@@ -16,9 +16,7 @@ class TicTacToe:
       """ Mehod Definition
          Operation:Creating game board
          :return"""
-      self.board=[[' ',' ',' '],
-                  [' ',' ',' '],
-                  [' ',' ',' ']]
+      self.board = [[' ' for _ in range(3)] for _ in range(3)]
     def printBoard(self):
         """Method Definition:
            Operation:Display board
